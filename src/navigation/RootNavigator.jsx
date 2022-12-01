@@ -1,58 +1,40 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-// import {createDrawerNavigator} from '@react-navigation/drawer';
-import {Home} from '..';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Image,
-  TextInput,
-  Button,
-  Switch,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import SplashScreen from 'react-native-splash-screen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Home} from '..';
+import Ball_icon from '../assets/Ball_icon';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-
-// const HomeScreen = ({navigation}) => {
+// const Home = ({navigation}) => {
 //   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Button
-//         onPress={() => navigation.navigate('Notifications')}
-//         title="Go to notifications"
-//       />
-//     </View>
+//     <Pressable onPress={() => navigation.openDrawer()}>
+//       <Text>Open Drawer123123</Text>
+//     </Pressable>
 //   );
-// }
+// };
 
-// const NotificationsScreen = ({navigation}) => {
+// const Conference = ({navigation}) => {
 //   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Button onPress={() => navigation.goBack()} title="Go back home" />
-//     </View>
+//     <Pressable onPress={() => navigation.openDrawer()}>
+//       <Text>Open Drawer</Text>
+//     </Pressable>
 //   );
-// }
+// };
+
+// const Story = ({navigation}) => {
+//   return (
+//     <Pressable onPress={() => navigation.navigate('Conference')}>
+//       <Text>Go to Conference</Text>
+//     </Pressable>
+//   );
+// };
 
 // const Drawer = createDrawerNavigator();
-
 
 export const RootNavigator = () => {
   useEffect(() => {
@@ -60,23 +42,47 @@ export const RootNavigator = () => {
   }, []);
 
   return (
-    // <NavigationContainer>
-    //   <Drawer.Navigator initialRouteName="Home">
-    //     <Drawer.Screen name="Home" component={HomeScreen} />
-    //     <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-    //   </Drawer.Navigator>
-    // </NavigationContainer>
     <NavigationContainer>
-      {/* <Tab.Navigator> */}
-      <Stack.Navigator>
+      <Tab.Navigator>
+        {/* <Stack.Navigator>   */}
         <Tab.Screen
           name="Home"
           options={{
             headerShown: false,
+            tabBarLabel: 'Home',
+            tabBarIcon: () => <Ball_icon width={30} height={30} />,
+            tabBarBadge: 3,
           }}
-          component={Home}></Tab.Screen>
-          </Stack.Navigator>
-      {/* </Tab.Navigator> */}
+          component={Home}
+        />
+        {/* </Stack.Navigator> */}
+      </Tab.Navigator>
     </NavigationContainer>
+
+    // <NavigationContainer>
+    //   <Drawer.Navigator>
+    //     <Drawer.Screen
+    //       options={{headerShown: false}}
+    //       name="Home"
+    //       component={Home}
+    //     />
+    //     <Drawer.Screen
+    //       options={{headerShown: false}}
+    //       name="Conference"
+    //       component={Conference}
+    //     />
+    //     <Drawer.Screen
+    //       options={{headerShown: false}}
+    //       name="Story"
+    //       component={Story}
+    //     />
+    //   </Drawer.Navigator>
+    // </NavigationContainer>
+
+    // <NavigationContainer>
+    //   <Drawer.Navigator>
+    //   <Drawer.Screen options={{headerShown:false}} name="Home" component={Home}/>
+    //   </Drawer.Navigator>
+    // </NavigationContainer>
   );
 };

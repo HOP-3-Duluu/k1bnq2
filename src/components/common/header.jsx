@@ -1,12 +1,17 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Pressable, Text, View} from 'react-native';
 import {styles} from '../../styles/header.jsx';
 
 export const Header = () => {
   return (
     <View style={styles.screenContainer}>
       <View style={styles.left_side}>
-        <Image style={styles.menu} source={require('../../assets/menu.png')} />
+        {/* <Pressable onPress={() => navigator.openDraw()}> */}
+          <Image
+            style={styles.menu}
+            source={require('../../assets/menu.png')}
+          />
+        {/* </Pressable> */}
         <Image
           style={styles.logo}
           source={require('../../assets/little_logo.png')}
