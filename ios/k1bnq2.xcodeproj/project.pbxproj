@@ -90,6 +90,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				7C1014D9293AEC9F0017D65A /* images-xcassets */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -104,6 +105,13 @@
 				2FE0F89440F2ED0B9E6F3D42 /* libPods-k1bnq2-k1bnq2Tests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C1014D9293AEC9F0017D65A /* images-xcassets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "images-xcassets";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {

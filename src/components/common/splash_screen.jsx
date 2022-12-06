@@ -10,7 +10,7 @@ export const SplashScreen = () => {
         <LottieView 
         source={require("../../assets/hamster.json")}
         autoPlay
-        loop={true}
+        loop
         onAnimationFinish={() => {
             navigation.navigate('Home')
         }}

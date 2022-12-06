@@ -10,10 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "react-native-community/async-storage",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/voice": "^1.1.9",
     "@react-navigation/bottom-tabs": "^6.4.3",
     "@react-navigation/drawer": "^6.5.3",
     "@react-navigation/native": "^6.0.16",
     "@react-navigation/native-stack": "^6.9.2",
+    "lottie-ios": "3.4.0",
     "lottie-react-native": "^5.1.4",
     "react": "18.1.0",
     "react-native": "0.70.5",
